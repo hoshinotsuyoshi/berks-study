@@ -79,7 +79,8 @@ Vagrant.configure("2") do |config|
     }
 
     chef.run_list = [
-        "recipe[berks_study::default]"
+        "recipe[mysql::client]",
+        "recipe[mysql::server]"
     ]
   end
 end
